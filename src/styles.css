@@ -1,0 +1,43 @@
+/* @import "https://unpkg.com/box-react-ui@23.6.0/lib/styles/box-ui.theme.css"; */
+
+body {
+  font-family: sans-serif;
+  font-size: 12px;
+}
+
+.app {
+  max-width: 400px;
+}
+
+form fieldset {
+  border: none;
+}
+
+.BoxForm {
+  border: 1px solid lightgray;
+  border-radius: 3px;
+  margin: 2em;
+  max-width: 100%;
+  padding: 2em;
+}
+
+.BoxForm label {
+  display: block;
+  font-size: 85%;
+  font-weight: bold;
+  margin-top: 1em;
+}
+
+.BoxForm {
+  textarea,
+  select,
+  input {
+    background: #fff;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    display: block;
+    margin-top: 0.33em;
+    min-width: 300px;
+    padding: 0.33em 1em;
+  }
+}
