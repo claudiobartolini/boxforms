@@ -91,7 +91,7 @@ const onMetaSubmit = ({ formData }) => {
   schema.properties.files = {
     type: "array",
     title:
-      "Please upload one or more files with this request (ctrl-click to select)",
+      "Please upload one or more files with this request (ctrl-click to select multiple files)",
     items: {
       type: "string",
       format: "data-url"
