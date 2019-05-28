@@ -4,7 +4,7 @@ import Form from "react-jsonschema-form"; // original
 import "./styles.css";
 
 var uiSchema = {
-  "ui:order": ["*", "file"]
+  "ui:order": ["*", "files"]
 };
 
 const uiMetaschema = {
@@ -88,11 +88,16 @@ const onMetaSubmit = ({ formData }) => {
         uiSchema[key.toString()] = JSON.parse('{"ui:widget": "checkboxes"}');
     }
   });
-  schema.properties.file = {
-    type: "string",
-    format: "data-url",
-    title: "Please upload the request file"
+  schema.properties.files = {
+    type: "array",
+    title:
+      "Please upload one or more files with this request (ctrl-click to select)",
+    items: {
+      type: "string",
+      format: "data-url"
+    }
   };
+
   schema.templateKey = templateKey;
   console.log(JSON.stringify(schema));
   ReactDOM.render(<App2 />, rootElement);
